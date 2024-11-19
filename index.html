@@ -14,20 +14,20 @@
     <body background="fondo.jpg"> </body>
     <H1> <center> Sensor de Temperatura NTC </center> </H1>
     <H2>En una serie de pasos se comentará cómo se programará el sensor NTC y luego se detallará sus aplicaciones.</H2>
-    <center><img src="C:\Users\fede\OneDrive\Escritorio\Sensor de temperatura HTML\ARDUINO.png" alt="1500"></center>
+    <center><img src="ARDUINO.png" alt=""></center>
 <h2> En primer lugar debemos definir las 2 variables que utilizaremos tanto para el sensor como para el actuador.</h2>
-<center><img src="C:\Users\fede\OneDrive\Escritorio\Sensor de temperatura HTML\definiciones.png" alt="1500"></center>
+<center><img src="definiciones.png" alt=""></center>
 <h2> <p> Luego programaremos la configuración, en el modo de trabajo de nuestros pines en arduino, led como salida y sensor como entrada, por otra parte, dejaremos activa la comunicación con el puerto serie. </p></h2>
-<center><img src="C:\Users\fede\OneDrive\Escritorio\Sensor de temperatura HTML\configuracion.png" alt="1500"></center>
+<center><img src="configuracion.png" alt=""></center>
 <h2><p> En cuanto a la configuración del bucle, se llama a la función (Leertemperatura) y guarda el resultado en la variable temperatura, además se llama a la función (controlarLed) pasando la temperatura para encender/apagar el LED y por último se detiene por un segundo antes de la próxima lectura.</p></h2>
-<center><img src="C:\Users\fede\OneDrive\Escritorio\Sensor de temperatura HTML\configuracion del bucle.png" alt="1500"></center>
+<center><img src="configuracion del bucle.png" alt=""></center>
 <h2><p> En este punto con la función (Leertemperatura), el programa leerá el valor analógico del sensor en un rango de 0 a 1023. Convirtiendo el valor leído en voltaje en un rango de 0 a 5V (voltios). </p></h2>
 <h2><p> Incluso la función ya mencionada realiza un cálculo de resistencia de dicho sensor para luego ser calculada como temperatura en °C</p></h2>
-<center><img src="C:\Users\fede\OneDrive\Escritorio\Sensor de temperatura HTML\Lectura de temperatura.png" alt="1500"></center>
+<center><img src="Lectura de temperatura.png" alt=""></center>
 <h2><p> Para visualizar los grados de la temperatura que percibe el sensor se utilizará un serial print en "Temperatura" y se utilizara un return para que devuelva el valor en grados centígrados.</p></h2>
-<center><img src="C:\Users\fede\OneDrive\Escritorio\Sensor de temperatura HTML\impresiones puerto serie.png" alt="1500"></center>
+<center><img src="impresiones puerto serie.png" alt=""></center>
 <h2><p> Por último utilizamos la función (controlarLed) para encender un led cuando la temperatura sensada sea mayor a 50°</p></h2>
-<center><img src="C:\Users\fede\OneDrive\Escritorio\Sensor de temperatura HTML\Funcion controlar led.png" alt="1500"></center>
+<center><img src="Funcion controlar led.png" alt=""></center>
 <p>
     <h2> Aplicaciones del Sensor NTC </h2>
     <h4>1.Medición de temperatura ambiental <br>
