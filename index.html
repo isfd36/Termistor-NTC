@@ -1,63 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sensor de Temperatura NTC</title>
+    <title>Sistema de Ventilacióon</title>
 </head>
 <body>
-    <audio controls>
-        <source src="DS2.mp3" type="audio/mpeg">
-      </audio>
-      
-    <body background="fondo.jpg"> </body>
-    <H1> <center> Sensor de Temperatura NTC </center> </H1>
-    <H2>En una serie de pasos se comentará cómo se programará el sensor NTC y luego se detallará sus aplicaciones.</H2>
-    <center><img src="ARDUINO.png" alt=""></center>
-<h2> En primer lugar debemos definir las 2 variables que utilizaremos tanto para el sensor como para el actuador.</h2>
-<center><img src="definiciones.png" alt=""></center>
-<h2> <p> Luego programaremos la configuración, en el modo de trabajo de nuestros pines en arduino, led como salida y sensor como entrada, por otra parte, dejaremos activa la comunicación con el puerto serie. </p></h2>
-<center><img src="configuracion.png" alt=""></center>
-<h2><p> En cuanto a la configuración del bucle, se llama a la función (Leertemperatura) y guarda el resultado en la variable temperatura, además se llama a la función (controlarLed) pasando la temperatura para encender/apagar el LED y por último se detiene por un segundo antes de la próxima lectura.</p></h2>
-<center><img src="configuracion del bucle.png" alt=""></center>
-<h2><p> En este punto con la función (Leertemperatura), el programa leerá el valor analógico del sensor en un rango de 0 a 1023. Convirtiendo el valor leído en voltaje en un rango de 0 a 5V (voltios). </p></h2>
-<h2><p> Incluso la función ya mencionada realiza un cálculo de resistencia de dicho sensor para luego ser calculada como temperatura en °C</p></h2>
-<center><img src="Lectura de temperatura.png" alt=""></center>
-<h2><p> Para visualizar los grados de la temperatura que percibe el sensor se utilizará un serial print en "Temperatura" y se utilizara un return para que devuelva el valor en grados centígrados.</p></h2>
-<center><img src="impresiones puerto serie.png" alt=""></center>
-<h2><p> Por último utilizamos la función (controlarLed) para encender un led cuando la temperatura sensada sea mayor a 50°</p></h2>
-<center><img src="Funcion controlar led.png" alt=""></center>
-<p>
-    <h2> Aplicaciones del Sensor NTC </h2>
-    <h4>1.Medición de temperatura ambiental <br>
-    -Monitorear la temperatura en interiores o exteriores.<br>
-    -Usar un display LCD o un monitor serial para mostrar los datos. <br>
-    2. Control de sistemas de calefacción o ventilación<br>
-    -Regular un ventilador o calefactor en función de la temperatura ambiente.<br>
-    -Activar/desactivar dispositivos cuando la temperatura supere un límite. <br>
-    3. Monitoreo de temperatura en electrodomésticos<br>
-    -Supervisar la temperatura en hornos, refrigeradores o acondicionadores de aire.<br>
-    -Implementar alertas para advertir de temperaturas anómalas.<br>
-    4. Sistemas de seguridad térmica<br>
-    -Proteger equipos electrónicos o motores eléctricos de sobrecalentamiento.<br>
-    -Detener procesos cuando se detecten temperaturas críticas.<br>
-    5. Estación meteorológica<br>
-    -Integrar el NTC con otros sensores (humedad, presión) para construir una estación completa.<br>
-    6. Control de temperatura en acuarios<br>
-    -Regular la temperatura del agua, encendiendo un calentador o activando un enfriador.<br>
-    7. Incubadoras y sistemas de cultivo controlado<br>
-    -Mantener un rango de temperatura constante para incubación de huevos o cultivos hidropónicos.<br>
-    8. Supervisión de baterías o dispositivos de carga<br>
-    -Detectar el aumento de temperatura en baterías para evitar sobrecalentamiento o explosiones.<br>
-    9. Detección de cambios térmicos rápidos<br>
-    -Usar el sensor para identificar procesos que generan calor rápidamente, como cortocircuitos.<br>
-    10. Calibración de sistemas de enfriamiento en PCs<br>
-    -Monitorear componentes como CPU o GPU para regular los ventiladores según el calor emitido.<br>
-    11. Termostato personalizado<br>
-    -Crear un termostato casero programado para mantener un rango específico de temperatura.<br>
-    12. Aplicaciones biomédicas<br>
-    -Monitorizar la temperatura corporal o en equipos médicos donde se necesite precisión térmica.</h4><br> </p>
-    <a href="https://wokwi.com/projects/399791653365254145" target="OBJETIVO">A continuación se comparte una simulación realizada en Wokwi</a>
+
+    <body background="Fondos.jpg"> 
+    </body>
+    <H1><center>Sistema Inteligente de Ventilación</center></H1>
+    <h3>Enfocados en la eficiencia energética y el confort, presentamos un sistema de ventilación inteligente que regula automáticamente ventiladores o calefactores en función de la temperatura ambiente. Utilizamos un termistor NTC como sensor principal, gestionado por un microcontrolador para garantizar un control preciso y eficiente.</h3>
+<center> <img src="Portada.png" alt="",width="250" height="250"></center>
+<h2>Características principales:</h2>
+<h3>
+    •	Medición precisa de temperatura con un termistor NTC. <br>
+    •	Control automático de ventiladores y calefactores. <br>
+    •	Optimización energética, reduciendo el consumo innecesario. <br>
+    •	Instalación sencilla y diseño modular. <br>
+    •	Opcional: supervisión remota con conectividad Wi-Fi. <br>
+    <h2>Beneficios destacados:</h2>
+    <h3> El sistema proporciona un entorno confortable y sostenible al mantener la temperatura ideal, reduciendo costos energéticos y cuidando el medio ambiente. Es versátil y se adapta a aplicaciones residenciales, industriales, agrícolas y comerciales.</h3>
+ <h2> Aplicaciones prácticas:</h2>
+ <h3>Ideal para el control climático en hogares, oficinas, invernaderos y espacios industriales.</h3>
+
+ <h2> Especificaciones técnicas:</h2>
+ <h3>
+    •	Sensor: Termistor NTC 10 kΩ. <br>
+    •	Rango: -40 °C a 125 °C. <br>
+    •	Voltaje: 3.3V a 5V. <br>
+    •	Salidas: Relés para dispositivos conectados. <br>
+    •	Opcional: conectividad Wi-Fi con ESP32/ESP8266. <br>
+    </h3>
+    <h2>  Propuesta de valor:</h2>
+    <h3>  El sistema es una solución económica, eficiente y fácil de implementar para el control térmico, asegurando una rápida respuesta a los cambios de temperatura.</h3>
+    <h2>Para cotizaciones contactate a travez de nuestras redes:</h2>
+    
+   <center> <form action="file:///C:/Users/fede/OneDrive/Escritorio/Sensor%20de%20temperatura%20HTML/index.html" method="get">
+        <button type="submit">Volver</button>
+    </form>
+</center>
+<video width="640" height="320" controls> <source src="video.mp4"</video>
 </body>
 </html>
